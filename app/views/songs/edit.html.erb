@@ -2,8 +2,11 @@
 <%= form_for @song, method: "patch" do |f| %>
   <%= f.text_field :title %>
   <%= f.text_field :release_year %>
-  <%= f.radio_button("song", "released", true) %>
-  <%= f.radio_button("song", "released", false) %>
+  <%= f.check_box :released %>
+  <!--
+  <%= f.radio_button :released, true %>
+  <%= f.radio_button :released, false %>
+  -->
   <%= f.text_field :genre %>
   <%= f.text_field :artist_name %>
 

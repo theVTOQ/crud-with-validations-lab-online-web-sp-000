@@ -11,6 +11,8 @@ class Song < ApplicationRecord
     if match != nil
       errors.add(:title, "can't be released twice in the same year")
     end
+    #binding.pry
+    match == nil
   end
 
   def is_released?

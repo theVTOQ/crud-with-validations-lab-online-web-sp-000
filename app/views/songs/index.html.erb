@@ -1,8 +1,25 @@
 <h1>All Songs:</h1>
-<ul>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Genre</th>
+    <th>Release Year</th>
+  </tr>
+
   <% @songs.each do |song| %>
-    <li>
-      <a href="/songs/<%= song.id %>">"<%= song.title %>" by <%= song.artist_name %> (<%= song.release_year %>)</a>
-    </li>
+    <tr>
+      <td>
+        <a href="/songs/<%= song.id %>">
+          <%= song.title %>
+        </a>
+      </td>
+
+      <td><%= song.artist_name %></td>
+
+      <td><%= song.genre %></td>
+
+      <td><%= song.release_year %></td>
+    </tr>
   <% end %>
-</ul>
+</table>
